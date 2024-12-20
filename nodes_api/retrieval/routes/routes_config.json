@@ -1,0 +1,14 @@
+{
+  "visa_identification": {
+    "route": "/agent/nodes/retrieval_v2/visa_identification"
+  },
+  "query_expansion": {
+    "route": "/agnet/nodes/retrieval_v2/query_expansion"
+  },
+  "retrieval_milvus_BM25_reranking": {
+    "route": "/agent/nodes/retrieval_v2/documents_retrieval_milvus_BM25_reranking"
+  },
+  "retrieval_generation": {
+    "route": "/agent/nodes/retrieval/retrieval_generation"
+  }
+}

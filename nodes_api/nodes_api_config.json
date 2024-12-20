@@ -1,0 +1,28 @@
+{
+  "route_prefix": "/api/v1",
+  "nodes": {
+    "intention_recognition": {
+      "host": "0.0.0.0",
+      "port": 8010
+    },
+    "retrieval": {
+      "host": "0.0.0.0",
+      "port": 8020,
+      "route": "/agent/nodes/retrieval_v2"
+    },
+    "introduction": {
+      "host": "0.0.0.0",
+      "port": 8098,
+      "route": "/agent/nodes/introduction"
+    },
+    "others_handling": {
+      "host": "0.0.0.0",
+      "port": 8099
+    }
+  },
+  "llamaindex": {
+    "BM_25_persist": "/mnt/sgnfsdata/gpu_124/gawainng/data/visa/rephrased_visa_bm25",
+    "chunk_size": 800,
+    "chunk_overlap": 100
+  }
+}

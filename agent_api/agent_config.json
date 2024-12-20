@@ -1,0 +1,11 @@
+{
+  "host": "0.0.0.0",
+  "port": 10020,
+  "route_prefix": "/api/v1",
+  "route": "/agent/talent_faq_chatbot/chat/completions",
+  "llm_generation": {
+    "model": "/llm_models/Qwen2.5-14B-Instruct",
+    "url": "http://192.168.2.143:15000/v1",
+    "API-key": "aaa"
+  }
+}

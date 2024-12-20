@@ -1,0 +1,11 @@
+{
+  "identification": {
+    "route" : "/agent/nodes/introduction/identification"
+  },
+  "self_introduction": {
+    "route": "/agent/nodes/self_introduction/self_introduction"
+  },
+  "simple_ai_introduction": {
+    "route": "/agent/nodes/introduction/simple_ai_introduction"
+  }
+}

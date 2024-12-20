@@ -1,0 +1,5 @@
+{
+  "intention_recognition": {
+    "route": "/agent/nodes/intention_recognition/intention_recognition"
+  }
+}

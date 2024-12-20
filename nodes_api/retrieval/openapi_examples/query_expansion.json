@@ -1,0 +1,67 @@
+{
+  "case 1": {
+    "summary": "question 1",
+    "value": {
+      "workflow_state": {
+        "visa_identification_result": "输入内地人才计划"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "内地居民如果想在香港工作，需要满足哪些条件？"
+        }
+      ],
+      "langgraph_path": []
+    }
+  },
+  "case 2": {
+    "summary": "question 1",
+    "value": {
+      "workflow_state": {
+        "visa_identification_result": "高端人才通行证"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "我是一名软件工程师，去年我的全年收入达到了港币 300 万元，我可以申请高才通计划吗？"
+        }
+      ],
+      "langgraph_path": []
+    }
+  },
+  "case 3": {
+    "summary": "multi-turns 1",
+    "value": {
+      "workflow_state": {
+        "visa_identification_result": "非本地毕业生留港/回港就业安排"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "我在香港的大学毕业,可以申请什么签证"
+        },
+        {
+          "role": "assistant",
+          "content": "如果您在香港的大学完成学业，您可能有资格申请IANG签证"
+        },
+        {
+          "role": "user",
+          "content": "IANG怎样申请"
+        }
+      ],
+      "langgraph_path": []
+    }
+  }
+}
