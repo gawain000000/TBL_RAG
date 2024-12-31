@@ -1,4 +1,4 @@
-# Talent FAQ Chatbot
+# talent_faq_chatbot
 
 An RAG (Retrieval-Augmented Generation) Agent built using LangGraph and LlamaIndex. This chatbot leverages advanced retrieval techniques and LLM capabilities to provide accurate and context-aware responses to user inquiries.
 
@@ -29,4 +29,42 @@ By incorporating a docstore, retrieval performance will be significantly improve
 ---
 
 With these updates, the Talent FAQ Chatbot will achieve better scalability, faster response times, and enhanced user experience through a modernized frontend and more efficient document storage and retrieval.
+
+
+## Building the Docker Images
+To build the Docker images for the application, use the following command:
+```bash
+docker compose build
+```
+
+## Configuration
+Before running the Docker containers, make sure to modify the configuration files to suit your requirements:
+
+1. **`nodes_api_config.json`**: Configure the LLM (Large Language Model) settings.
+2. **`env_config.json`**: Configure the embedding model and other environment-specific variables.
+
+These configuration files are located in the `config` directory:
+```
+config/
+  |- nodes_api_config.json
+  |- env_config.json
+```
+
+## Running the Docker Containers
+
+### Start All Containers
+To start all containers in detached mode:
+```bash
+docker compose up -d
+```
+
+### Run a Specific Container
+To start a specific container, replace `<container_name>` with the desired container's name:
+```bash
+docker compose up <container_name>
+```
+
+## Additional Notes
+- Ensure that Docker and Docker Compose are properly installed on your system.
+- If any changes are made to the configuration files, rebuild the images before starting the containers using `docker compose build`.
 
