@@ -1,0 +1,20 @@
+{
+  "case 1": {
+    "summary": "question 1",
+    "value": {
+      "workflow_state": {
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "今日天气如何？"
+        }
+      ],
+      "langgraph_path": []
+    }
+  }
+}

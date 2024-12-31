@@ -1,0 +1,40 @@
+{
+  "case 1": {
+    "summary": "question 1",
+    "value": {
+      "workflow_state": {
+        "expanded_query": "内地居民申请香港工作签证，特别是针对香港人才引进计划（输入内地人才计划），需要满足哪些具体条件？。"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "内地居民如果想在香港工作，需要满足哪些条件？"
+        }
+      ],
+      "langgraph_path": []
+    }
+  },
+  "case 2": {
+    "summary": "question 2",
+    "value": {
+      "workflow_state": {
+        "expanded_query": "我没有工作经验，可以申请高端人才通行证签证吗？"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are an AI assistant developed by Simple AI."
+        },
+        {
+          "role": "user",
+          "content": "我没有工作经验，可以申请高才通签证吗？"
+        }
+      ],
+      "langgraph_path": []
+    }
+  }
+}

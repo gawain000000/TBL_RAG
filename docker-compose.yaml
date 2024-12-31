@@ -1,0 +1,58 @@
+services:
+  intention_recognition_node:
+    build:
+      context: .
+    volumes:
+      - ./config/nodes_api_config.json:/python_code/talent_faq_agent/nodes_api/nodes_api_config.json:ro
+      - ./config/env_config.json:/python_code/talent_faq_agent/env_config.json:ro
+    ports:
+      - "20010:20010"
+    command: |
+      sh -c 'cd /python_code/talent_faq_agent/nodes_api/intention_recognition && fastapi run --host 0.0.0.0 --port 20010 --workers 2 main.py'
+
+  retrieval_node:
+    build:
+      context: .
+    volumes:
+      - ./config/nodes_api_config.json:/python_code/talent_faq_agent/nodes_api/nodes_api_config.json:ro
+      - ./config/env_config.json:/python_code/talent_faq_agent/env_config.json:ro
+      - /mnt/sgnfsdata/gpu_124/gawainng/data/visa/rephrased_visa_bm25:/mnt/sgnfsdata/gpu_124/gawainng/data/visa/rephrased_visa_bm25
+    ports:
+      - "20020:20020"
+    command: |
+      sh -c 'cd /python_code/talent_faq_agent/nodes_api/retrieval && fastapi run --host 0.0.0.0 --port 20020 --workers 2 main.py'
+
+  introduction_node:
+    build:
+      context: .
+    volumes:
+      - ./config/nodes_api_config.json:/python_code/talent_faq_agent/nodes_api/nodes_api_config.json:ro
+      - ./config/env_config.json:/python_code/talent_faq_agent/env_config.json:ro
+    ports:
+      - "20098:20098"
+    command: |
+      sh -c 'cd /python_code/talent_faq_agent/nodes_api/introduction && fastapi run --host 0.0.0.0 --port 20098 --workers 2 main.py'
+
+  others_handling_node:
+    build:
+      context: .
+    volumes:
+      - ./config/nodes_api_config.json:/python_code/talent_faq_agent/nodes_api/nodes_api_config.json:ro
+      - ./config/env_config.json:/python_code/talent_faq_agent/env_config.json:ro
+    ports:
+      - "20099:20099"
+    command: |
+      sh -c 'cd /python_code/talent_faq_agent/nodes_api/others_handling && fastapi run --host 0.0.0.0 --port 20099 --workers 2 main.py'
+
+  talent_agent:
+    build:
+      context: .
+    volumes:
+      - ./config/nodes_api_config.json:/python_code/talent_faq_agent/nodes_api/nodes_api_config.json:ro
+      - ./config/env_config.json:/python_code/talent_faq_agent/env_config.json:ro
+    ports:
+      - "20000:20000"
+    command: |
+      sh -c 'cd /python_code/talent_faq_agent/agent_api && fastapi run --host 0.0.0.0 --port 20000 --workers 2 main.py'
+
+

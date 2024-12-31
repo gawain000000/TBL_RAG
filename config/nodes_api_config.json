@@ -1,0 +1,23 @@
+{
+  "route_prefix": "/api/v1",
+  "nodes": {
+    "intention_recognition": {
+      "host": "intention_recognition_node",
+      "port": 20010
+    },
+    "retrieval": {
+      "host": "retrieval_node",
+      "port": 20020,
+      "route": "/agent/nodes/retrieval"
+    },
+    "introduction": {
+      "host": "introduction_node",
+      "port": 20098,
+      "route": "/agent/nodes/introduction"
+    },
+    "others_handling": {
+      "host": "others_handling_node",
+      "port": 20099
+    }
+  }
+}
